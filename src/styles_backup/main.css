@@ -1,0 +1,275 @@
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+body {
+  font-family: "Helvetica Neue",Helvetica,Arial,"PingFang HK","PingFang TC","PingFang SC","Hiragino Sans GB","Microsoft Yahei",sans-serif;
+  color: #242658;
+  font-size: 0.85rem;
+  background: #D6D3CC no-repeat;
+  background-size: contain;
+  background-position: bottom center;
+}
+a:visited {
+  color: #242658;
+}
+.center-block {
+  margin-left: auto;
+  margin-right: auto;
+}
+.text-center {
+  text-align: center;
+}
+.reverse {
+  transform: rotateY(180deg);
+}
+.container {
+  max-width: 80%;
+}
+.questions .container {
+  max-width: none;
+  height: 100%;
+}
+.qa {
+  position: relative;
+  height: 26rem;
+}
+.nav-buttons {
+  position: absolute;
+  bottom: 0px;
+  width: 100%;
+}
+.intro {
+  border-style: solid;
+  border-color: #A86E77;
+  border-width: 2px;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  max-height: 20rem;
+  overflow: auto;
+}
+.intro-title {
+  font-size: 1.1rem;
+}
+.result-list {
+  padding-left: 1rem;
+  list-style-type: square;
+}
+.result-number, .result-percent {
+  color: #439A8A;
+}
+.result-number {
+  font-size: 1.5rem;
+}
+.button-primary {
+  background: #A86E77;
+  color: white;
+}
+.show-next, .show-prev, .show-result {
+  height: 2.5rem; /* bind .progress-bar height */
+  border-radius: 0px;
+}
+.show-next, .show-result {
+  float: right;
+}
+.show-prev {
+  background-color: #A4AFAD;
+}
+.start-button, .again-button, .accept-button {
+  margin-top: 2rem;
+  margin-left: 1.5rem;
+}
+.social-bar {
+  margin-top: 0.5rem;
+  margin-left: 1.5rem;
+}
+.progress-bar {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  border: none;
+  background-color: rgb(223, 227, 226);
+  width: 100%;
+  height: 1.25rem; /* bind .show-next, .show-result height */
+}
+.progress-bar::-moz-progress-bar {
+  background-color: #A4AFAD;
+}
+.progress-bar::-webkit-progress-value {
+  background-color: #A4AFAD;
+}
+.progress-bar::-webkit-progress-bar {
+  background: transparent;
+}
+.loader-bg {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-color: #A86E77;
+}
+.loader-inner {
+  left: 50%;
+  top: 50%;
+  position: absolute;
+}
+#fullpage {
+  opacity: 0;
+}
+.question {
+  text-align: center;
+  font-weight: normal;
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+  font-size: 1.3rem;
+}
+.option {
+  display: block;
+  background-color: #A4AFAD;
+  height: 2.5rem;
+  line-height: 2.5rem;
+  color: #DFE3E2;
+  margin-bottom: 1px;
+  transition: all .3s;
+  cursor: pointer;
+  position: relative;
+}
+.option.picture {
+  height: 6rem;
+  line-height: 6rem;
+}
+.picture img {
+  max-height: 100%;
+  width: 100%;
+  padding-left: 3rem;
+}
+/* Not work on iOS safari 9 */
+/*.option:hover {
+  background-color: #A86E77;
+}*/
+input:checked + .option {
+  background-color: #A86E77;
+}
+/*.extra-field {
+  display: none;
+}
+input:checked + .option .extra-field {
+  display: inline;
+}*/
+.extra-field input, select, option {
+  color: #242658;
+}
+.option p {
+  margin: 0;
+  padding-left: 3rem;
+}
+.pure-g.options > .pure-u-1-2 .option p {
+  margin: 0;
+  padding-left: 0rem;
+  text-align: center;
+  font-size: 0.74rem;
+}
+input:checked+.option::before {
+  content: '\2713';
+  position: absolute;
+  left: 1rem;
+}
+.pure-g.options > .pure-u-1-2:first-child {
+  padding-right: 1px;
+}
+.pure-g.options .option {
+  height: 1.9rem;
+  line-height: 1.9rem;
+}
+.range-desc {
+  padding-left: 2.5rem;
+}
+.range-intro {
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+.range-intro > span:first-child {
+  color: #9D676C;
+}
+.range-intro > span:last-child {
+  float: right;
+}
+.credit{
+  position: absolute;
+  text-align: right;
+  bottom: 10px;
+  width: 95%;
+}
+.social-share-button {
+  width: 40px;
+  height: 40px;
+  background-color: #94929E;
+  border: 0px;
+  cursor: pointer;
+  padding: 5px;
+}
+.social-share-button img {
+  width: 100%;
+}
+.logo {
+  background-image: url("../images/initium-logo.png");
+  background-repeat: no-repeat;
+  background-size: 2.5rem 2.5rem;
+  width: 2.5rem;
+  height: 2.5rem;
+  margin-top: 0.3rem;
+  margin-left: 0.3rem;
+  position: absolute;
+  top: 0px;
+}
+/* ≥ 568px */
+@media (min-width: 35.5rem) {
+  body {
+    font-size: 1rem;
+  }
+  .container, .questions .container {
+    max-width: 35.5rem;
+  }
+  .qa {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .question {
+    text-align: left;
+  }
+  .intro {
+    max-height: none;
+  }
+}
+/* ≥ 768px */
+@media (min-width: 48rem) {
+  .container, .questions .container {
+    max-width: 48rem;
+  }
+}
+/* ≥ 1024px */
+@media (min-width: 64rem) {
+  body {
+    background-position: center 130%;
+  }
+}
+/* ≥ 1280px */
+@media (min-width: 80rem) {
+  body {
+    background-position: center 150%;
+  }
+}
+
+@media (min-width: 96rem) {
+  body {
+    background-position: center 200%;
+  }
+}
+
+@media (min-width: 112rem) {
+  body {
+    background-position: center 300%;
+  }
+}

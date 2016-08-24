@@ -1,0 +1,64 @@
+.nav-btns {
+  padding: 0 .5em;
+
+  @media (--phone-portrait) {
+    padding: 0;
+  }
+}
+.nav-btn {
+  display: inline-block;
+  position: absolute * * 0;
+  font-family: inherit;
+  font-size: 100%;
+  padding: .5em 1em;
+  color: white;
+  border: none;
+  text-decoration: none;
+  zoom: 1;
+  line-height: normal;
+  white-space: nowrap;
+  vertical-align: middle;
+  text-align: center;
+  border-radius: 0;
+  cursor: pointer;
+  user-select: none;
+  transition: all .3s ease-in-out;
+
+  @media (--phone-portrait) {
+    width: 50%;
+  }
+
+  &:disabled {
+    background-color: #E6E6E6;
+    color: #000;
+    cursor: default;
+  };
+
+  &--left {
+    left: 0;
+  }
+  &--right {
+    right: 0;
+  }
+}
+.nav-btn-again {
+  display: inline-block;
+  font-family: inherit;
+  font-size: 100%;
+  padding: .5em 1em;
+  color: white;
+  border: none;
+  text-decoration: none;
+  zoom: 1;
+  line-height: normal;
+  white-space: nowrap;
+  vertical-align: middle;
+  text-align: center;
+  border-radius: 0;
+  cursor: pointer;
+  user-select: none;
+  transition: all .3s ease-in-out;
+  background-color: #a86e77;
+  margin-top: 1rem;
+  margin-left: 1rem;
+}

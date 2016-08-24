@@ -1,0 +1,21 @@
+<div class="modal-mask" v-show="show" transition="modal">
+  <div class="modal-wrapper">
+    <div class="modal-container">
+
+      <div class="modal-body">
+        <slot name="body">
+          {{ text }}
+        </slot>
+      </div>
+
+      <div class="modal-footer">
+        <slot name="footer">
+          <button class="modal-default-button"
+            @click="handle_modal_click">
+            確認
+          </button>
+        </slot>
+      </div>
+    </div>
+  </div>
+</div>

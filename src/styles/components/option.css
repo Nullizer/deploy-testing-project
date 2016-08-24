@@ -1,0 +1,110 @@
+.options {
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 16px;
+  color: #DFE3E2;
+  overflow-x: hidden;
+  overflow-y: auto;
+  max-width: 48rem;
+  margin: 0 auto;
+
+  &--row {
+    flex-direction: row;
+  }
+  &--column {
+    flex-direction: column;
+  }
+  &--two-column {
+    .option {
+      width: 48%;
+      width: calc(50% - 4px);
+      white-space: nowrap;
+      overflow: hidden;
+
+      @media (--phone) {
+        font-size: .75em;
+      }
+    }
+  }
+  &--text {
+    .option {
+      margin: 2px;
+
+      input {
+        &:checked {
+          & + label {
+            &::before {
+              content: '\2713';
+              position: absolute;
+              left: 1rem;
+            };
+          }
+        }
+      }
+      label {
+        line-height: 2.5em;
+      }
+    }
+  }
+  &--picture {
+    .option {
+      size: 25% 50%;
+      padding: .5em;
+      text-align: center;
+
+      @media(--phone-portrait) {
+        width: 100%;
+      }
+      @media(--tablet-portrait) {
+        width: 50%;
+        height: 33.3%;
+      }
+
+      label {
+        padding: .5em;
+        padding-bottom: 2.5em;
+      }
+
+      &__image {
+        img {
+          display: block;
+          margin: 0 auto;
+        }
+      }
+      &__text {
+        position: absolute * * 0 0;
+        width: 100%;
+      }
+    }
+  }
+}
+
+.option {
+  cursor: pointer;
+  flex: 0 1 calc(50% - 2px * 4);
+
+  label {
+    display: block;
+    size: 100%;
+    position: relative;
+    cursor: pointer;
+    transition: all .3s ease-in-out;
+
+    &:hover {
+      filter: brightness(.9);
+    };
+  }
+  &__text {
+    line-height: 2.5em;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-align: center;
+  }
+  &__tick {
+
+  }
+  > span {
+    color: #000;
+  }
+}

@@ -1,0 +1,10 @@
+.intro {
+  line-height: 1.5;
+
+  > div {
+    padding: 1em;
+    /*border: 2px solid #a86e77;*/
+    max-height: 17rem;
+    overflow: auto;
+  }
+}

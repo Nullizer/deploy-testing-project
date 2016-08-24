@@ -1,0 +1,15 @@
+<section class="issue__options">
+  <div>
+    <p>
+      <span style="float: left;">{{ issue.left }}</span>
+      <span style="float: right;">{{ issue.right }}</span>
+    </p>
+    <div v-for="(option_index, option) in issue.options" class="range-option">
+      <p class="range-desc">{{ option.text }}</p>
+      <input id="option-{{issue_index+1}}-{{option_index+1}}" type="range" name="option-{{issue_index+1}}-{{option_index+1}}"
+            step="0.2" min="{{option.min}}" max="{{option.max}}" value="{{option.def}}" data-def="{{option.def}}"
+            data-score-tag="{{ issue.scoreTag }}"
+            v-bind:class="{ 'reverse': issue.reverse }">
+    </div>
+  </div>
+</section>

@@ -1,0 +1,33 @@
+:root {
+  --font-family-base: "Helvetica Neue", "Helvetica", "PingFang SC", "Arial", sans-serif;
+  --line-height-base: 1.4;
+
+  --font-size-xx-small: 9px;
+  --font-size-small: 12px;
+  --font-size-base: 14px;
+  --font-size-regular: 16px;
+
+  --font-weight-light: 300;
+  --font-weight-regular: 400;
+  --font-weight-bold: 600;
+
+  --color-initium: #31AFBE;
+  --color-initium-light: #D6EFF2;
+  --color-initium-gray: #e3e3e3;
+  --color-initium-gray-dark: #838383;
+  --color-initium-gray-light: #f2f2f2;
+  --color-initium-gray-light-alpha: rgba(227, 227, 227, .9);
+  --color-initium-red: #E03E51;
+  --color-black: #000;
+  --color-white: #FFF;
+  --color-steel: #666;
+}
+
+@custom-media --all-mobile-devices (device-width <= 1024px);
+@custom-media --all-mobile-devices-portrait (device-width <= 1024px) and (orientation: portrait);
+@custom-media --phone (device-width <= 767px);
+@custom-media --phone-portrait (device-width <= 767px) and (orientation : portrait);
+@custom-media --phone-landscape (device-width <= 767px) and (orientation : landscape);
+@custom-media --tablet (768px <= device-width <= 1024px);
+@custom-media --tablet-portrait (768px <= device-width <= 1024px) and (orientation : portrait);
+@custom-media --tablet-landscape (768px <= device-width <= 1024px) and (orientation : landscape);

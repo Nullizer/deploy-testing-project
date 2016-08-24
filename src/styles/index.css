@@ -1,0 +1,17 @@
+@import "helpers/variables";
+
+@import "vendors/reset_v2";
+
+@import "base/reset";
+@import "base/utils";
+
+@import "components/loader";
+@import "components/intro";
+@import "components/issue";
+@import "components/progress-bar";
+@import "components/question";
+@import "components/option";
+@import "components/nav-btn";
+@import "components/range";
+@import "components/modal";
+@import "components/result";

@@ -1,0 +1,5 @@
+<div class="issue__question question">
+  <h1 v-if="issue.question.length < 13" class="question__text">{{ issue.question }}</h1>
+  <p v-else class="question__text_long">{{ issue.question }}</p>
+  <img class="question__image" v-if="issue.image" src="{{ issue.image }}" alt="issue.question" />
+</div>

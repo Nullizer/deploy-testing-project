@@ -1,0 +1,41 @@
+<ul
+  class="issue__options options"
+  v-bind:class="{'options--row': issue.picture, 'options--row options--text': !issue.picture, 'options--picture': issue.picture, 'options--two-column': issue.options.length >= 8}"
+>
+  <template v-for="(option_index, option) in issue.options">
+    <li class="option">
+      <input
+        hidden
+        id="option-{{issue_index+1}}-{{option_index+1}}"
+        type="{{ issue.variant === 'multiple' ? 'checkbox' : 'radio' }}"
+        name="option-{{issue_index+1}}"
+        value="{{option_index+1}}"
+        v-bind:class="{'option-show-modal': issue.showModal}"
+        data-show-next="{{ option.showNext }}"
+        data-score="{{ option.score || 0 }}"
+        data-score-tag="{{ issue.scoreTag }}"
+        data-show-text="{{ option.showText }}"
+      >
+      <label for="option-{{issue_index+1}}-{{option_index+1}}">
+
+        <div v-if="option.image" class="option__image">
+          <img src="{{ option.image }}" alt="{{ option.text }}" @load="handleOptImgLoaded" />
+        </div>
+
+        <div v-if="option.text" class="option__text">
+          <span>{{ option.text }}</span>
+          <span class="extra-field" v-if="option.extraInput.type === 'text'">
+            {{ option.extraInput.prefix }}
+            <input id="option-{{issue_index+1}}-{{option_index+1}}-extra" type="text" name="option-{{issue_index+1}}-extra"
+                    v-bind:style="{ maxWidth: option.extraInput.width + 'rem' }" />
+          </span>
+          <span class="extra-field" v-if="option.extraInput.type === 'select'">
+            <select id="option-{{issue_index+1}}-{{option_index+1}}-extra" name="option-{{issue_index+1}}-extra">
+              <option v-for="selectOption in option.extraInput.options" value ="{{selectOption}}">{{selectOption}}</option>
+            </select>
+          </span>
+        </div>
+      </label>
+    </li>
+  </template>
+</ul>

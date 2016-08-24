@@ -1,0 +1,29 @@
+.question {
+  text-align: center;
+  &__text {
+    margin: 0;
+    font-size: 1.3rem;
+    font-weight: var(--font-weight-regular);
+    line-height: 1.2;
+  }
+  &__text_long {
+    margin: 1.5rem auto;
+    width: 70%;
+    font-size: 1.1rem;
+    /*line-height: 1.2rem;*/
+    font-weight: var(--font-weight-regular);
+    line-height: 1.2;
+  }
+  &__image {
+    max-height: 18rem;
+    max-width: 70%;
+    border: 10px solid white;
+
+    @media (--phone) {
+      max-height: 8rem;
+    }
+  }
+  &__intro {
+    margin-top: 4rem;
+  }
+}

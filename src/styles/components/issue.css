@@ -1,0 +1,54 @@
+.issue {
+  position: absolute 1% * * 15%;
+  size: 70% 80%;
+  margin: 0 auto;
+  font-size: 16px;
+
+  @media(--all-mobile-devices-portrait) {
+    top: 0;
+    left: 0;
+    size: 100%;
+  }
+  @media(--tablet) {
+    left: 10%;
+    width: 80%;
+  }
+
+  &__question {
+    margin-top: 1.5rem;
+    min-height: 3rem;
+    line-height: 3em;
+    padding: 0 .5em;
+
+    @media (--phone-portrait) {
+      min-height: 4rem;
+      line-height: 4em;
+      padding: 0;
+    }
+  }
+  &__options,
+  &__intro {
+    /*height: calc(100% - 3rem - 3rem);*/
+
+    @media (--phone-portrait) {
+      /*height: calc(100% - 4rem - 4rem);*/
+    }
+  }
+  &__intro {
+    padding: 1em 0;
+  }
+  &__nav-btns {
+    position: absolute * * 0;
+    size: 100% 3rem;
+
+    @media (--phone-portrait) {
+      height: 4rem;
+    }
+  }
+}
+.disclaimer {
+  margin-top: 4rem;
+  .nav-btn {
+    bottom: 4rem;
+  }
+}
