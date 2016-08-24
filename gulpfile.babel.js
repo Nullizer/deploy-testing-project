@@ -115,20 +115,6 @@ gulp.task('html', ['bundle', 'styles'], () => {
     .pipe(gulp.dest(destDir))
 })
 
-gulp.task('deploy:staging', () => gulp.src(destDir + '/**').pipe(rsync({
-  root: 'dist',
-  hostname: 'showcase.initiumlab.com',
-  username: 'vagrant',
-  destination: '/home/vagrant/web/hkfoodnames/',
-  recursive: true,
-  incremental: true,
-  relative: true,
-  emptyDirectories: true,
-  clean: true,
-  exclude: ['.DS_Store', '.directory'],
-  include: []
-})))
-
 gulp.task('serve', ['build'], () => {
   browserSync({
     notify: false,
@@ -145,5 +131,5 @@ gulp.task('serve', ['build'], () => {
 })
 
 gulp.task('deploy:prod', () => gulp.src('./dist/**/*').pipe(ghPages({
-  remoteUrl: 'git@github.com:initiumsp/2016-hk-food-names.git'
+  remoteUrl: 'git@github.com:Nullizer/deploy-testing-project.git'
 })))

@@ -1,7 +1,7 @@
 import $ from 'jquery'
 const questions = {
-  title: 'Peter很忙',
-  intro: `<p>Who is Peter?</p>
+  title: '部署優化調試用',
+  intro: `<p>a部署優化調試用</p>
 <p>Peter是一個喜歡中華文化的美國人。為了更好地學習中文，體驗中國文化，他到香港住了下來。在體驗這個東方都市的日常生活時，他也認識了不少兩岸三地的朋友。
 不過作為一個還在學習中文的Beginner，Peter總會被中港台對同一事物的不同說法弄得暈頭轉向。來幫幫很忙的Peter吧。</p>`,
   styles: {
